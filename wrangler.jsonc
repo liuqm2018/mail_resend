@@ -1,0 +1,15 @@
+{
+  // Cloudflare Workers 配置。让 `wrangler deploy`（新版控制台默认命令）能成功部署。
+  "name": "mail-resend",
+  "compatibility_date": "2026-07-07",
+
+  // 动态接口入口：处理 /api/send 和 /api/config。
+  "main": "worker.js",
+
+  // 静态页面目录。请求先匹配这里的文件（如 / → index.html），
+  // 匹配不到的路径（如 /api/send）才交给上面的 Worker 处理。
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  }
+}
