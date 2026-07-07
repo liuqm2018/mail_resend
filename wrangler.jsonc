@@ -1,6 +1,6 @@
 {
   // Cloudflare Workers 配置。让 `wrangler deploy`（新版控制台默认命令）能成功部署。
-  "name": "mail-resend",
+  "name": "mailresend",
   "compatibility_date": "2026-07-07",
 
   // 动态接口入口：处理 /api/send 和 /api/config。
