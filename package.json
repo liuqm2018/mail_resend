@@ -1,0 +1,13 @@
+{
+  "name": "mail-resend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "无需编程即可通过 Resend API 发送邮件的页面，部署在 Cloudflare Pages 上。",
+  "scripts": {
+    "dev": "wrangler pages dev public",
+    "deploy": "wrangler pages deploy public"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}

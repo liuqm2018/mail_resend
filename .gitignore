@@ -1,0 +1,8 @@
+# 本地环境变量（含 API key），绝不能提交到 git
+.dev.vars
+.env
+
+# 依赖与构建产物
+node_modules/
+.wrangler/
+dist/

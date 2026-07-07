@@ -1,0 +1,9 @@
+# 复制这个文件为 .dev.vars（不带 .example），填入你自己的值。
+# .dev.vars 只用于本地开发，已被 .gitignore 忽略，不会提交。
+
+# 你的 Resend API key（在 https://resend.com/api-keys 创建，以 re_ 开头）
+RESEND_API_KEY=re_xxxxxxxxxxxxxxxxxxxx
+
+# 可选：给页面加一个访问密码。设置后，页面上会出现"访问密码"输入框，
+# 必须填对才能发信，防止别人拿到你的网址后随意消耗额度。留空则不启用。
+ACCESS_PASSWORD=

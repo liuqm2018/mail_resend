@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>发送邮件 · Resend</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>发送邮件</h1>
+    <p class="sub">通过 Resend API 发送，无需编写任何代码。</p>
+
+    <form id="mail-form" autocomplete="off">
+      <div class="row" id="password-row" hidden>
+        <label for="password">访问密码</label>
+        <input type="password" id="password" name="password" placeholder="如果服务端设置了密码，请填写" />
+      </div>
+
+      <div class="row">
+        <label for="from">发件人 <span class="req">*</span></label>
+        <input type="text" id="from" name="from" required
+               placeholder="发件人 <you@yourdomain.com>" />
+        <small>必须是你在 Resend 已验证的域名邮箱。</small>
+      </div>
+
+      <div class="row">
+        <label for="to">收件人 <span class="req">*</span></label>
+        <input type="text" id="to" name="to" required
+               placeholder="a@example.com, b@example.com" />
+        <small>多个地址用逗号分隔。</small>
+      </div>
+
+      <div class="grid">
+        <div class="row">
+          <label for="cc">抄送 (CC)</label>
+          <input type="text" id="cc" name="cc" placeholder="可选" />
+        </div>
+        <div class="row">
+          <label for="bcc">密送 (BCC)</label>
+          <input type="text" id="bcc" name="bcc" placeholder="可选" />
+        </div>
+      </div>
+
+      <div class="row">
+        <label for="reply_to">回复至 (Reply-To)</label>
+        <input type="text" id="reply_to" name="reply_to" placeholder="可选" />
+      </div>
+
+      <div class="row">
+        <label for="subject">主题 <span class="req">*</span></label>
+        <input type="text" id="subject" name="subject" required placeholder="邮件主题" />
+      </div>
+
+      <div class="row">
+        <label>正文格式</label>
+        <div class="toggle">
+          <label><input type="radio" name="mode" value="text" checked /> 纯文本</label>
+          <label><input type="radio" name="mode" value="html" /> HTML</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <label for="body">正文 <span class="req">*</span></label>
+        <textarea id="body" name="body" rows="10" required
+                  placeholder="在这里输入邮件内容…"></textarea>
+      </div>
+
+      <button type="submit" id="submit-btn">发送</button>
+      <div id="status" class="status" role="status" aria-live="polite"></div>
+    </form>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
